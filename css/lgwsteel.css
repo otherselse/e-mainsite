@@ -16,7 +16,8 @@ a,a:hover{text-decoration: none;color:#1365E8}
 .en_logrmlist.on{color:#1365E8;}
 .en_logrmlist.on:after{content:'';position: absolute; width: 40px;height: 2px;background: #1365E8;left:50%;margin-left:-20px;bottom:-13px;}
 .en_logrinput{box-sizing:border-box;height: 38px;background: #FFFFFF;border: 1px solid #ADADAD;border-radius: 3px;line-height: 38px;font-size: 14px;padding:0 10px;transition: .15s;}
-.en_logrinput:hover,.en_logrinput:focus {border-color: #1365E8;}
+.en_input{box-sizing:border-box;height: 36px;background: #FFFFFF;border: 1px solid #CDCDCD;border-radius: 3px;line-height: 36px;font-size: 14px;padding:0 10px;transition: .15s;}
+.en_logrinput:hover,.en_logrinput:focus,.en_input:hover,.en_input:focus{border-color: #1365E8;}
 .en_logrinput:focus{box-shadow: 0 2px 2px 0 rgba(19,101,232,0.15);-webkit-box-shadow: 0 2px 2px 0 rgba(19,101,232,0.15);}
 .en_logrmenu{margin-bottom: 35px}
 .en_logrbut{width:38%;margin-left:2%;height: 38px;background: #FFFFFF;border: 1px solid #1365E8;border-radius: 3px;color: #1365E8;display: inline-block;box-sizing: border-box;text-align: center;line-height: 38px;font-size: 14px;transition: .15s;}
@@ -28,3 +29,10 @@ a,a:hover{text-decoration: none;color:#1365E8}
 /*resource*/
 .resource_bg{height: 270px;background:url(../images/shop/resourcebg.png) no-repeat;background-size: 100% 100%;box-sizing: border-box;padding-top:75px;}
 .f48{font-size: 48px;}
+.resource_titlebg{height:53px;background:url(../images/shop/resourcetbg.png);font-size: 18px;line-height: 53px;box-sizing: border-box;padding-left:20px;font-weight: bold}
+.resouceIcon{display: inline-block;vertical-align: middle;background-image:url(../images/shop/shopIcon.png);}
+.res_Cust{background-position: 0 0;width: 30px;height: 30px;}
+.res_cont{border: 1px solid #F4F4F4;box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.05);box-sizing: border-box;width: 1180px;margin:0 auto 30px;}
+.res_dcont{padding:30px 20px;}
+.res_CustBot{background-position:0 -30px ;width: 121px;height: 115px;position: absolute;right:10px;bottom: 0px;}
+.pct18{width: 18%}
