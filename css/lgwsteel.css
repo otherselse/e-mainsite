@@ -1,5 +1,6 @@
 /*reg and log*/
 /*body{font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;}*/
+html,body{ text-size-adjust: none;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;}
 a,a:hover{text-decoration: none;color:#1365E8}
 .en_logl{position: absolute;left:50%;top:50%;transform: translate(-100%,-50%);-webkit-transform: translate(-100%,-50%);padding-right:5%}
 .f72{font-size: 72px}
@@ -10,8 +11,20 @@ a,a:hover{text-decoration: none;color:#1365E8}
 .en_logrtop{background: linear-gradient(0deg, #F2F7FF, #FFFFFF);border-radius: 6px 6px 0px 0px;border-bottom: 1px rgba(9, 62, 147, 0.1) solid;box-sizing: border-box;padding:20px 30px;overflow: hidden;line-height: 68px}
 .en_logbut{width: 90px;height: 30px;border: 1px solid rgba(1, 49, 110, 0.3);border-radius: 3px;color: #2A5387;text-align: center;line-height: 30px}
 .en_logbut:hover{border-color:rgba(1, 49, 110, 1);}
-.en_logrbody{box-sizing: border-box;padding:35px 80px 50px;}
+.en_logrbody{box-sizing: border-box;padding:28px 80px 50px;}
 .en_logrmlist{display: inline-block;position: relative;font-size: 18px;color:#282828;}
 .en_logrmlist.on{color:#1365E8;}
 .en_logrmlist.on:after{content:'';position: absolute; width: 40px;height: 2px;background: #1365E8;left:50%;margin-left:-20px;bottom:-13px;}
-.en_logrinput{box-sizing:border-box;width: 100%;height: 38px;background: #FFFFFF;border: 1px solid #ADADAD;border-radius: 3px;line-height: 38px}
+.en_logrinput{box-sizing:border-box;height: 38px;background: #FFFFFF;border: 1px solid #ADADAD;border-radius: 3px;line-height: 38px;font-size: 14px;padding:0 10px;transition: .15s;}
+.en_logrinput:hover,.en_logrinput:focus {border-color: #1365E8;}
+.en_logrinput:focus{box-shadow: 0 2px 2px 0 rgba(19,101,232,0.15);-webkit-box-shadow: 0 2px 2px 0 rgba(19,101,232,0.15);}
+.en_logrmenu{margin-bottom: 35px}
+.en_logrbut{width:38%;margin-left:2%;height: 38px;background: #FFFFFF;border: 1px solid #1365E8;border-radius: 3px;color: #1365E8;display: inline-block;box-sizing: border-box;text-align: center;line-height: 38px;font-size: 14px;transition: .15s;}
+.en_logrbut:hover{background-color:#1365E8;color:#fff; }
+.en_logbigbut{height: 38px;background: #1365E8;border-radius: 3px;color:#fff;transition: .15s;font-size: 16px;text-align: center;line-height: 38px;}
+.en_logbigbut:hover{box-shadow: 0px 6px 49px 0px rgba(20, 42, 135, 0.2);color:#fff;background-color: #2172F5}
+.g28{color:#282828;}
+
+/*resource*/
+.resource_bg{height: 270px;background:url(../images/shop/resourcebg.png) no-repeat;background-size: 100% 100%;box-sizing: border-box;padding-top:75px;}
+.f48{font-size: 48px;}

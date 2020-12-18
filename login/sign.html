@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
 	<link rel="stylesheet" href="../css/lgwsteel.css">	
 	<title>lgwsteel-log in</title>
 	<style>
@@ -22,18 +23,129 @@
 			<a href="" class="dib">logo</a>
 			<div class="r tr"><a class="dib en_logbut vm" href="##">Back Home</a></div>
 		</div>
-		<div class="en_logrbody">
-			<div class="en_logrmenu ">
+		<div class="en_logrbody ">
+			<div class="en_logrmenu mt5">
 				<a href="javascript:void(0)" class="en_logrmlist mr20 on">Account Sign In</a>
 				<a href="javascript:void(0)" class="en_logrmlist">Captcha Sign In</a>
 			</div>
-			<div class="mt35 lh30">E-mail/User name: </div>
-			<div class=""><input type="text" name="" class="en_logrinput" />
+			<div class="accountReg ">
+				<div class="lh30">E-mail/User name: </div>
+				<div class="">
+					<input type="text"  class="en_logrinput pct100"   id="telphone" name="custMap.mobile" />
+				</div>
+				<div class="lh30 mt10">Password:  </div>
+				<div class="f0">
+					<input type="password"  class="en_logrinput pct100" id="loginPassword"  name="custMap.password" />
+				</div>
+				<a href="javascript:void(0)" class="en_logbigbut db mt40" onclick="login_new(this)">Sign In</a>
+			</div>
+			<div class="accountReg dn">
+				<div class="lh30">E-mail/User name: </div>
+				<div class="">
+					<input type="text" class="en_logrinput pct100" id="mobileNo" name="custMap.email" />
+				</div>
+				<div class="lh30 mt10">Captcha: </div>
+				<div class="f0">
+					<input type="text"  class="en_logrinput pct60 vm" id="checkCode" name="custMap.password" />
+					<a href="javascript:void(0)" class="en_logrbut vm" onclick="Delaybar()" id="codee">Get Captcha</a>
+				</div>
+				<a href="javascript:void(0)" class="en_logbigbut db mt40" onclick="login_newCode(this)">Sign In</a>
+			</div>
+
+			<div class="cl ovh mt10">
+				<a href="log.html" class=""><u>Join Free</u></a>
+				<a href="http://www.lgwsteel.com/english/login/forgotPwd.jsp" class="r g28">Forgot Password?</a>
+			</div>
 		</div>
 	</div>
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+	<script>
+		$(function(){
+			$(".en_logrmlist").on("click",function(){
+				var i=$(this).parents(".en_logrmenu").find(".en_logrmlist").index($(this));
+				$(this).addClass("on").siblings().removeClass("on");
+				$(".accountReg").hide().eq(i).show();
+			})
+
+			if($('#telphone').focus()||$('#loginPassword').focus()){
+				 $("input").keydown(function(event){ 
+					 var keyNum= event.which;
+					    if(keyNum==13){
+					    	login_new();
+					    }
+				});
+			}
+
+		})
+
+		function login_new(obj){
+			var _t=$.trim($("#telphone").val());
+			var _p=$.trim($("#loginPassword").val());
+			if(_t==""){
+				layer.msg("Please enter your account !");
+				return;
+			}
+			if(_p==""){
+				layer.msg("Please enter your Password !");
+				return;
+			}
+		}
+
+		function login_newCode(){
+		  	var mobile = $.trim($("#mobileNo").val());
+			var checkCode = $.trim($("#checkCode").val());
+			if(mobile==""){
+				layer.msg("Please enter your email !");
+				return;
+			}
+			
+			if(!checkEmail(mobile)){
+				return;
+			}
+
+			if(checkCode==""){
+				layer.msg("Please enter your captcha !");
+				return;
+			}
+
+		}
+
+		function checkEmail(v){
+			var regTel= /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+			if(!regTel.test(v)){//邮箱格式不正确
+				layer.msg("Please enter the correct email !");
+				return false;
+			}else{
+				return true
+			}
+
+		}
+
+		function Delaybar(){
+			var mobile = $.trim($("#mobileNo").val());
+			if(!checkEmail(mobile)){
+				return;
+			}
+			var Delaytime = 86400;//24个小时 = 86400
+			$("#codee").addClass("disabled");
+			var Delayval = window.setInterval(SetRemainTime, 1000); 
+			
+			function SetRemainTime() {
+				if (Delaytime > 0) {
+				$("#codee").text("" + Delaytime +"s") ;
+				Delaytime = Delaytime - 1; 
+				} else {
+				window.clearInterval(Delayval); 
+				$("#codee").text("Get Captcha");
+				$("#codee").addClass("disabled")
+				} 
+			}
+		}
+	</script>
 
 </body>
 </html>
