@@ -63,7 +63,7 @@
 '                </li>'+
 '                <li class="dib menu-li">'+
 '                    <div class="c28 dib menu-hover">'+
-'                    <a href="/english/config/about.jsp" class="c28 dib">ABOUT</a>'+
+'                    <a href="../config/about.html" class="c28 dib">ABOUT</a>'+
 '                    </div>'+
 '                </li>'+
 '            </ul>'+

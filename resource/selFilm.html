@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Select Film</title>
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css"  />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
+	<link rel="stylesheet" href="../css/lgwsteel.css" type="text/css"  />	
+	<style>
+		body,html{background-color: #fff}
+		.ui-option{min-width:120px;}
+	</style>
+</head>
+<body>
+
+	<div class="pt25 pl25 pr25">
+		<div id="tmfs_msg" class="mb15  ">
+			<span class="single">
+				<button class="ui-option mr5 on" value="30002" onclick="tmfs(this)">No Film</button>
+				<button class="ui-option mr5" value="30001" onclick="tmfs(this)">Film</button>
+			</span>
+		</div>
+
+		<div id="tmfs_chil" class="mb15 pt15 bte dn">
+			<span class="single">
+				<button class="ui-option mr5 " value="Film on topside_上贴膜">Film on topside</button>
+				<button class="ui-option mr5 " value="Film on backside_下贴膜">Film on backside</button>
+				<button class="ui-option mr5 " value="Film on both sides_双面贴膜">Film on both sides</button>
+			</span>
+		</div>
+
+		<div id="tmfs_chil1" class="mb15 pt15 bte dn" >
+			<span class="single">
+				<button class="ui-option mr5 " value="White Film_白膜">White Film</button>
+				<button class="ui-option mr5 " value="Marked Film_有字膜">Marked Film</button>
+				<button class="ui-option mr5 " value="Unmarked Film_无字膜">Unmarked Film</button>
+				<button class="ui-option mr5 " value="Blue Film_蓝膜">Blue Film</button>
+			</span>
+		</div>
+
+		<div id="tmfs_chil2" class="mb15 pt15 dn bte" >
+			<span class="single">
+				<button class="ui-option mr5 " value="4S">4S</button>
+				<button class="ui-option mr5 " value="5S">5S</button>
+				<button class="ui-option mr5 " value="7S">7S</button>
+				<button class="ui-option mr5 " value="8S">8S</button>
+			</span>
+		</div>
+
+		
+		
+	</div>
+		<div class="tr bte pt15">
+	    	<button class="ui-button mr10 w65" data-type="clear" >取消</button>
+	    	<button class="ui-button mr20 w65">确定</button>
+
+	    </div>
+
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/lgwsteel.js"></script>
+	<script>
+		$(function(){
+
+		})
+
+
+		function tmfs(obj){
+			if($(obj).attr("value")=="30002"){
+		     		$("#tmfs_chil").hide();
+		     		$("#tmfs_chil1").hide();
+		     		$("#tmfs_chil2").hide();
+		     	}else if($(obj).attr("value")=="30001"){
+		     		$("#tmfs_chil").show();
+					$("#tmfs_chil1").show();
+					$("#tmfs_chil2").show();
+
+		     	}
+		     	//$("#tmfs_temp_id", parent.document).val($(obj).attr("value"));
+		     	//$("#tmfs_temp_name", parent.document).val($(obj).text());
+		}
+		
+
+
+	</script>
+</body>
+</html>
