@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
+	<link rel="stylesheet" href="http://www.lgwsteel.com/english/index/css/index2020new.css">
+	<link rel="stylesheet" href="../css/lgwsteel.css">
+	<title>Lgwsteel-Submit order</title>	
+</head>
+<body>
+	<script type="text/javascript" src="../js/top.js"></script>
+	<div class="m1366">
+		<div class="w1180 auto mt30">
+			<div class="cart_title f0 three">			
+				<span class="cart_tItem c_stepOne"><span class="cart_tNum">1</span>Shopping Cart</span>
+				<span class="cart_tItem c_stepTwo"><span class="cart_tNum">2</span>Choose Gole Vendors</span>
+				<span class="cart_tItem c_stepThree"><span class="cart_tNum">3</span>Submit Order</span>
+			</div>
+			<div class="cart_cntbg mb130 ovh">
+				<div class="pt30 pb30 pl20 pr20">
+					<div class="ovh">
+						<span class="t_linerbg"><span class="pl10 f18">Payment Term</span></span>
+					</div>
+					<div class="cart_goldCont mt10 ">
+						<div class="radio">
+							<span class="dib pct10">Price Term:</span>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId1" type="radio" value="CFR" name="order.priceterm" onclick="pricetermClick(this)"></i>CFR</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId2" type="radio" value="CIF" name="order.priceterm" onclick="pricetermClick(this)"></i>CIF</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId3" type="radio" value="FOB" name="order.priceterm" onclick="pricetermClick(this)"></i>FOB</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId4" type="radio" value="CPT" name="order.priceterm" onclick="pricetermClick(this)"></i>CPT</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId5" type="radio" value="EXW" name="order.priceterm" onclick="pricetermClick(this)"></i>EXW</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId6" type="radio" value="DDP" name="order.priceterm" onclick="pricetermClick(this)"></i>DDP</label>
+							<span class="txtAlarm red dn"  id="pricetermCheckedId">*  Required</span>
+						</div>
+						<div class="mt15">
+							<span class="dib pct10">Payment Term:</span>
+							<span class="input-selSearch pct25">
+			                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="Choose">
+			                    <div class="search-cont">
+			                        <a href="javascript:void(0)" class="search-list db ell">10%T/T</a>
+			                        <a href="javascript:void(0)" class="search-list db ell">15%T/T</a>
+			                        <a href="javascript:void(0)" class="search-list db ell">USANCE L/C PAYABLE AT SIGHT</a>
+			                        <a href="javascript:void(0)" class="search-list db ell">30%T/T+70%L/C</a>
+			                    </div>
+			                 </span>
+			                 <span class="txtAlarm red dn" style="" id="clearingFormNameId">*  Required</span>
+						</div>
+					</div>
+					<!-- Payment Term end-->
+
+					<div class="ovh mt30">
+						<span class="t_linerbg"><span class="pl10 f18">Documents Required</span></span>
+					</div>
+					<div class="cart_goldCont mt10 ovh">
+						<div class="radio">
+							<span class="dib pct13">Certificate of Origin:</span>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FORM A" name="FORM A"></i>FORM A</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FORM B" name="FORM B"></i>FORM B</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FORM C" name="FORM C"></i>FORM C</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FORM D" name="FORM D"></i>FORM D</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FORM E" name="FORM E"></i>FORM E</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="C/O" name="C/O"></i>C/O</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="FTA" name="FTA"></i>FTA</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" value="Not Need" name="Not Need" checked=""></i>Not Need</label>
+						</div>
+						<div class=" mt15 f0">
+							<div class="dib pct50 f14 radio">
+								<span class="dib pct26">Third party Inspection:</span>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="SGS" name="SGS"></i>SGS</label>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" value="BV" name="BV"></i>BV</label>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" value="Not Need" name="Not Need" checked=""></i>Not Need</label>
+							</div>
+							<div class="dib pct50 f14 radio">
+								<span class="dib pct26">Mill Test Certificate:</span>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity"  name="order.factoryCard"  value="0" id="RadioGroup1_0"></i>Need</label>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="order.factoryCard"  value="1" checked="checked" id="RadioGroup1_1" checked=""></i>Not Need</label>
+							</div>
+						</div>
+						<div class=" mt15 f0">
+							<div class="dib pct50 f14 radio">
+								<span class="dib pct26">Partial Shipment:</span>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="order.isbatch"  value="0" id="RadioGroup1_0"></i>Allowed</label>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="order.isbatch" value="1" id="RadioGroup1_1" checked=""></i>Not Allowed</label>
+							</div>
+							<div class="dib pct50 f14 radio">
+								<span class="dib pct26">Transhipment:</span>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity"  name="order.istransfer" value="0" id="RadioGroup2_0"></i>Allowed</label>
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="order.istransfer" value="1" id="RadioGroup2_1" checked=""></i>Not Allowed</label>
+							</div>
+						</div>
+					</div>
+					<!-- Documents Required end-->
+
+					<div class="ovh mt30">
+						<span class="t_linerbg"><span class="pl10 f18">Receiving Information</span></span>
+					</div>
+					<div class="cart_goldCont mt10 ovh">
+						<div class="f0">
+							<div class="dib pct50 f14 ">
+								<span class="dib pct30"><span class="red">*</span>Latest Date of Shipment:</span>
+								<span class="ui-input pct50" data-type="time"><input type="text" placeholder="Choose" id="txtDate" name="order.delIDate" readonly=""></span>
+							</div>
+							<div class="dib pct50 f14 ">
+								<span class="dib pct30"><span class="red">*</span>Email:</span>
+								<input type="text" id="orderCustEmail" name="order.custemail" value="90975201907@qq.com" class="ui-input pct50">
+							</div>
+						</div>
+					</div>
+					<!-- Receiving Information end-->
+
+
+
+					<div class="ovh mt30">
+						<span class="t_linerbg"><span class="pl10 f18">Gold Vendor</span></span>
+					</div>
+					<div class="cart_goldCont mt10 ovh">
+						<img src="http://fs.lgsteel.cn:8080/file/upload/img/2015-01-21/1421830048360.jpg" width="70" height="94" class="l mr20">
+						<div class="cart_goldCont_r">
+							<div class="">
+								<span class="f18 w130 dib">EYXJ</span>
+								<a class="g67 mr40" href="mailto:56548sgfdg@qq.com" ><i class="resouceIcon cart_mailIcon"></i>56548sgfdg@qq.com</a>
+								<span class="g67"  ><i class="resouceIcon cart_mailTel"></i>15478956251</span>
+							</div>
+							<div class="mt5">
+								<span class="w130 dib">Professional Field：</span>
+								<span class="cart_goldTip dib mr10">Plating Steel</span>
+								<span class="cart_goldTip dib mr10">Construction Steel</span>
+								<span class="cart_goldTip dib mr10">Plating Steel</span>
+							</div>
+							<div class="mt10 g67">								
+                                It is easy and efficient to order on lgwsteel. As a Gold Vendors, I have rich experience and network during many years’ work in steel field. It’s my 
+pursuit to find the suitable steel resources for you, so I believe that I am your best choice to realize the win-win cooperation on lgwsteel.
+                            
+							</div>
+						</div>
+					</div>
+					<!-- 金牌商家结束 end -->
+				</div>
+				<div class="mb30 tc mt30">
+					<a href="chooseGold.html" class="ui-button mr10 w200 vm" data-type="bb"><i class="resouceIcon cart_prevIcon mr10 vm"></i><span class="vm dib">Prev</span></a>
+					<a href="submitOrder.html" class="ui-button  w200 vm" data-type="big"><span class="vm dib">Next</span><i class="resouceIcon cart_nextIcon ml10 vm"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/footer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/gold2020/js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://www.lgwsteel.com/english/index/js/index.js"></script>
+	<script type="text/javascript" src="../js/lgwsteel.js"></script>
+	<script>
+			laydate.render({
+				elem: '#txtDate'
+				, theme: 'lgblue'
+				,trigger: 'click'
+			});
+
+		function pricetermClick(){
+
+		}
+	</script>
+	</body>
+</html>

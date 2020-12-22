@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
 	<link rel="stylesheet" href="http://www.lgwsteel.com/english/index/css/index2020new.css">
 	<link rel="stylesheet" href="../css/lgwsteel.css">
-	<title>Lgwsteel-Ordering</title>	
+	<title>Lgwsteel-Choose gold vendors</title>	
 </head>
 <body>
 	<script type="text/javascript" src="../js/top.js"></script>
@@ -51,7 +51,7 @@ pursuit to find the suitable steel resources for you, so I believe that I am you
 				
 				<div class="mb130 tc">
 					<a href="shopCart.html" class="ui-button mr10 w200 vm" data-type="bb"><i class="resouceIcon cart_prevIcon mr10 vm"></i><span class="vm dib">Prev</span></a>
-					<a href="chooseGold.html" class="ui-button  w200 vm" data-type="big"><span class="vm dib">Next</span><i class="resouceIcon cart_nextIcon ml10 vm"></i></a>
+					<a href="submitOrder.html" class="ui-button  w200 vm" data-type="big"><span class="vm dib">Next</span><i class="resouceIcon cart_nextIcon ml10 vm"></i></a>
 				</div>
 
 			</div>
@@ -72,7 +72,14 @@ pursuit to find the suitable steel resources for you, so I believe that I am you
 		})
 
 		function selectGold(){
-			
+				layer.open({
+					type: 2,
+					title: 'select gold',
+					shadeClose: true,
+					shade: 0.4,
+					area: ['800px', '550px'],
+					content: 'selectGolden.html' //iframe的url
+				});
 		}
 
 	</script>
