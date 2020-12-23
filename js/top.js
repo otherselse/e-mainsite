@@ -46,8 +46,8 @@
 '                    <div class="c28 dib menu-hover trangle poi">'+
 '                        <span class=" dib">ONLINE MALL</span>'+
 '                        <ul class="promenu abs tl dn ">'+
-'                            <li class="proli"><a href="/supplierEnIndex/supplierEnIndexAction_toSupplierIndex.action" class="db g0">Mall</a></li>'+
-'                            <li class="proli"><a href="/enResource/enResourceAction_toSteelGoodsStore.action" class="db g0">Finished Stell</a></li>'+
+'                            <li class="proli"><a href="../mall/mall.html" class="db g0">Mall</a></li>'+
+'                            <li class="proli"><a href="../mall/steel.html" class="db g0">Finished Steel</a></li>'+
 '                        </ul>'+
 '                    </div>'+
 '                </li>'+

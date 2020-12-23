@@ -8,16 +8,17 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css">
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
 	<link rel="stylesheet" href="http://www.lgwsteel.com/english/index/css/index2020new.css">
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/lgwsteel.css">
 	<title>Lgwsteel-Submit order</title>	
 </head>
-<body>
+<body class="showTip">
 	<script type="text/javascript" src="../js/top.js"></script>
 	<div class="m1366">
 		<div class="w1180 auto mt30">
 			<div class="cart_title f0 three">			
 				<span class="cart_tItem c_stepOne"><span class="cart_tNum">1</span>Shopping Cart</span>
-				<span class="cart_tItem c_stepTwo"><span class="cart_tNum">2</span>Choose Gole Vendors</span>
+				<span class="cart_tItem c_stepTwo"><span class="cart_tNum">2</span>Choose Gold Vendors</span>
 				<span class="cart_tItem c_stepThree"><span class="cart_tNum">3</span>Submit Order</span>
 			</div>
 			<div class="cart_cntbg mb130 ovh">
@@ -27,7 +28,7 @@
 					</div>
 					<div class="cart_goldCont mt10 ">
 						<div class="radio">
-							<span class="dib pct10">Price Term:</span>
+							<span class="dib pct10"><span class="red">*</span>Price Term:</span>
 							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId1" type="radio" value="CFR" name="order.priceterm" onclick="pricetermClick(this)"></i>CFR</label>
 							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId2" type="radio" value="CIF" name="order.priceterm" onclick="pricetermClick(this)"></i>CIF</label>
 							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" id="pricetermId3" type="radio" value="FOB" name="order.priceterm" onclick="pricetermClick(this)"></i>FOB</label>
@@ -37,7 +38,7 @@
 							<span class="txtAlarm red dn"  id="pricetermCheckedId">*  Required</span>
 						</div>
 						<div class="mt15">
-							<span class="dib pct10">Payment Term:</span>
+							<span class="dib pct10"><span class="red">*</span>Payment Term:</span>
 							<span class="input-selSearch pct25">
 			                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="Choose">
 			                    <div class="search-cont">
@@ -97,8 +98,9 @@
 
 					<div class="ovh mt30">
 						<span class="t_linerbg"><span class="pl10 f18">Receiving Information</span></span>
+						<a class="r" href="javascript:void(0)" title="The seal stamped in the sales contract needs to cover your email. Please enter the correct email."><i class="resouceIcon cart_alertIcon"></i>Operating Instruction</a>
 					</div>
-					<div class="cart_goldCont mt10 ovh">
+					<div class="cart_goldCont mt10 ">
 						<div class="f0">
 							<div class="dib pct50 f14 ">
 								<span class="dib pct30"><span class="red">*</span>Latest Date of Shipment:</span>
@@ -107,6 +109,31 @@
 							<div class="dib pct50 f14 ">
 								<span class="dib pct30"><span class="red">*</span>Email:</span>
 								<input type="text" id="orderCustEmail" name="order.custemail" value="90975201907@qq.com" class="ui-input pct50">
+							</div>
+							<div class="dib pct50 f14 mt10">
+								<span class="dib pct30"><span class="red">*</span>Country:</span>
+								<span class="input-selSearch pct50">
+				                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="Choose">
+				                    <div class="search-cont">
+				                        <a href="javascript:void(0)" class="search-list db ell">1</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">2</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">3</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">4</a>
+				                    </div>
+				                </span>
+							</div>
+							<div class="dib pct50 f14 mt10">
+								<span class="dib pct30"><span class="red">*</span>Discharge Port:</span>
+								<span class="input-selSearch pct50">
+				                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="Choose">
+				                    <div class="search-cont">
+				                        <a href="javascript:void(0)" class="search-list db ell">1</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">2</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">3</a>
+				                        <a href="javascript:void(0)" class="search-list db ell">4</a>
+				                    </div>
+				                </span>
+				                <a href="javascript:void(0)" onclick="addContryAndPort()" class="g28 ml5"><u>Add Port ?</u></a>
 							</div>
 						</div>
 					</div>
@@ -140,10 +167,35 @@ pursuit to find the suitable steel resources for you, so I believe that I am you
 					</div>
 					<!-- 金牌商家结束 end -->
 				</div>
-				<div class="mb30 tc mt30">
+				<div class="mb30 tc ">
 					<a href="chooseGold.html" class="ui-button mr10 w200 vm" data-type="bb"><i class="resouceIcon cart_prevIcon mr10 vm"></i><span class="vm dib">Prev</span></a>
 					<a href="submitOrder.html" class="ui-button  w200 vm" data-type="big"><span class="vm dib">Next</span><i class="resouceIcon cart_nextIcon ml10 vm"></i></a>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="showTable" class="dn">
+		<div class="p20">
+			<div class="">
+				<span class="dib pct15">Country：</span>
+				<span class="input-selSearch pct70">
+                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="input">
+                    <div class="search-cont">
+                        <a href="javascript:void(0)" class="search-list db ell">1</a>
+                        <a href="javascript:void(0)" class="search-list db ell">2</a>
+                        <a href="javascript:void(0)" class="search-list db ell">3</a>
+                        <a href="javascript:void(0)" class="search-list db ell">4</a>
+                    </div>
+                </span>
+			</div>
+			<div class="mt10">
+				<span class="dib pct15">Port：</span>
+				<input type="text" name="" class="ui-input pct70" />
+			</div>
+			<div class="tc mt30">
+				<button class="ui-button mr10 " type="button">OK</button>
+				<button class="ui-button " data-type="clear" type="button">Cancel</button>
 			</div>
 		</div>
 	</div>
@@ -152,6 +204,7 @@ pursuit to find the suitable steel resources for you, so I believe that I am you
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/gold2020/js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="http://www.lgwsteel.com/english/index/js/index.js"></script>
 	<script type="text/javascript" src="../js/lgwsteel.js"></script>
 	<script>
@@ -163,6 +216,17 @@ pursuit to find the suitable steel resources for you, so I believe that I am you
 
 		function pricetermClick(){
 
+		}
+
+		function addContryAndPort(){
+			layer.open({
+				type: 1,
+				shade: 0.4,
+				title:'Independent addition of Country and Port',
+				area: ['600px', '300px'],
+				shadeClose:true,
+				content:$("#showTable")
+			});
 		}
 	</script>
 	</body>

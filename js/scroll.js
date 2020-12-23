@@ -1,9 +1,9 @@
 var scroll=""
 scroll='<div class="scrollRight tc">'+
 		'<a href="../cart/shopCart.html" class="db rel bbe cart_nav_title" title="cart"><i class="scrollCartIcon dib"></i><i class="dib abs scrollCartNum f12">12</i></a>'+
-	'	<a href="##" class="db rel scrollhover bbe" title="请扫一扫乐刚微信">'+
+	'	<a href="##" class="db rel scrollhover bbe" title="scan wechat">'+
 	'		<i class="lgicon scrollWeixinIcon dib "></i>'+
-	'		<div class="abs scrollWx f12"><i class="dib scrollWxicon"></i><i class="dib scrollWxdot abs"></i><br/>请扫一扫乐刚微信</div>'+
+	'		<div class="abs scrollWx f12"><i class="dib scrollWxicon"></i><i class="dib scrollWxdot abs"></i><br/>scan wechat</div>'+
 	'	</a>'+
 	'	<a href="##" class="db rel scrollhover bbe" title="Hotline">'+
 	'		<i class="lgicon scrollTelIcon dib "></i>'+
