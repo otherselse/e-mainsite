@@ -2,6 +2,8 @@
   var str1='<div class="tr f12 htop">'+
            ' <span class="dib"><a href="/english/myLG/basic/basic.action" class="dib">My LG</a></span>'+
            ' <span class="dib ml10 mr10 g9">|</span>'+
+           ' <span class="dib"><a href="../cart/shopCart.html" class="dib">My Cart</a></span>'+
+           ' <span class="dib ml10 mr10 g9">|</span>'+
            ' <span class="dib mobile">0086(21)62671680、62671061</span>'+
            ' <span class="tab ffmpr dib  mr20 ml30">'+
            '     <a href="/front/enIndexAction_Index.action" class="f12 brc dib pct50 act">EN</a>'+
