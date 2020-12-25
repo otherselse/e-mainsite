@@ -1,0 +1,4 @@
+    (function(){
+  var str1='<div class="pageWrap mt20" id="page"><a class="gray" href="javascript:void(0);" onclick="return previousPage()">Prev</a><a class="gray current" onclick="javascript:return goToPage(1)">1</a><a class="gray" onclick="javascript:return goToPage(2)">2</a><a class="gray" onclick="javascript:return goToPage(3)">3</a><a class="gray" onclick="javascript:return goToPage(4)">4</a><a class="gray" onclick="javascript:return goToPage(5)">5</a><a class="gray" onclick="javascript:return goToPage(6)">6</a>&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="javascript:void(0);" onclick="return nextPage()" class="gray">Next</a>&nbsp;&nbsp;Total &nbsp;&nbsp;3068&nbsp;&nbsp;pages&nbsp;&nbsp;go to&nbsp;<input type="text" id="targetPage" name="targetPage" value="1" onkeypress="if (event.keyCode==13){turnPageBtn.click();return false;}">&nbsp;page&nbsp;<button id="turnPageBtn">GO</button></div>'
+    document.write(str1);
+})()
