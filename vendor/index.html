@@ -18,7 +18,23 @@
 		<div class="vendor_bg wh"></div>
 		<div class="w1180 auto pb130">
 			<div class="vender_search">
-				list
+				<div class="vender_sleft">
+					<a class="vender_slist on"><i class="vender_icon vender_1"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_2"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_3"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_4"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_5"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_6"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_7"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_8"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_9"></i></a>
+					<a class="vender_slist"><i class="vender_icon vender_10"></i></a>
+				</div>
+				<div class="vender_sright tc">
+					<input type="text" placeholder="keyword..." class="bd_none lh30 pct60" />
+					<button class="ui-button w90" type="button">search</button>
+				</div>
+
 			</div>
 			<!-- vender_search search -->
 
@@ -85,6 +101,14 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="http://www.lgwsteel.com/english/index/js/index.js"></script>
 	<script type="text/javascript" src="../js/lgwsteel.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".vender_slist").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on")
+			})
+		})
+	</script>
 
 </body>
 </html>
