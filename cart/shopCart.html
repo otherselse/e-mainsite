@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css">
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css">
 	<link rel="stylesheet" href="http://www.lgwsteel.com/english/index/css/index2020new.css">
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/lgwsteel.css">
 	<title>Lgwsteel-Shopping cart</title>	
 </head>
-<body>
+<body class="showTip">
 	<script type="text/javascript" src="../js/top.js"></script>
 	<div class="m1366">
 		<div class="w1180 auto mt30">
@@ -67,19 +68,19 @@
 								<div class="f0">
 									<div class="pct50 f14 dib">
 										<span class="dib pct30 tr">Thickness Tolerance(+)：</span>
-										<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>   
+										<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>   
 									</div>
 									<div class="pct50 f14 dib">
 										<span class="dib pct30 tr">Length Tolerance (+)：</span>
-										<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>        
+										<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>        
 									</div>
 									<div class="pct50 f14 dib mt15">
 										<span class="dib pct30 tr">Width Tolerance (+)：</span>
-										<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span> 
+										<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span> 
 									</div>
 									<div class="pct50 f14 dib mt15">
 										<span class="dib pct30 tr">Diagonal Tolerance (+)：</span>
-										<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>        
+										<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>        
 									</div>
 									<div class="pct50 f14 dib mt15">
 										<span class="dib pct30 tr">Zn-Coat：</span>
@@ -197,6 +198,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="http://www.lgwsteel.com/english/index/js/index.js"></script>
 	<script type="text/javascript" src="../js/lgwsteel.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script>
 		$(function(){
 			$(":radio[name='Stamping']").on("click",function(){
@@ -210,6 +212,8 @@
 			$(".cart_set").on("click",function(){
 				$(this).parents("tr").next("tr.hideTr").toggle();
 			})
+
+
 
 
 		})

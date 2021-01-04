@@ -92,8 +92,9 @@
 		<!-- res_cont2 end -->
 
 		<div class="res_cont">
-			<div class="resource_titlebg">
+			<div class="resource_titlebg ovh">
 				<i class="resouceIcon res_Other mr5"></i>Other
+				<a class="resouceIcon res_up r mt15 mr15" href="javascript:void(0)" onclick="clickToggle(this)"></a>
 			</div>
 			<div class="res_dcont rel f0">
 				<i class="resouceIcon res_OtherBot"></i>
@@ -128,27 +129,28 @@
 		<!-- res_cont3 end -->
 
 		<div class="res_cont">
-			<div class="resource_titlebg">
+			<div class="resource_titlebg on">
 				<i class="resouceIcon res_Tol mr5"></i>Tolerance<span class="n">（optional）</span>
+				<a class="resouceIcon res_up r mt15 mr15" href="javascript:void(0)" onclick="clickToggle(this)"></a>
 			</div>
-			<div class="res_dcont rel f0">
+			<div class="res_dcont rel f0 dn">
 				<i class="resouceIcon res_TolBot"></i>
 
 				<div class="pct50 f14 dib">
 					<span class="dib pct30">Thickness Tolerance(+)：</span>
-					<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>   
+					<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>   
 				</div>
 				<div class="pct50 f14 dib">
 					<span class="dib pct30">Length Tolerance (+)：</span>
-					<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>        
+					<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>        
 				</div>
 				<div class="pct50 f14 dib mt15">
 					<span class="dib pct30">Width Tolerance (+)：</span>
-					<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span> 
+					<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span> 
 				</div>
 				<div class="pct50 f14 dib mt15">
 					<span class="dib pct30">Diagonal Tolerance (+)：</span>
-					<span class="ui-input pct50 g80 f14" data-type="price"><input type="text" value="" class="pct35" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct35" placeholder="none">mm</span>        
+					<span class="ui-input pct50 g80 f14 tc" data-type="price"><input type="text" value="" class="pct33" placeholder="none">mm<span class="dib mr10 ml10">~</span><input type="text" value="" class="pct33" placeholder="none">mm</span>        
 				</div>
 				<div class="pct50 f14 dib mt15">
 					<span class="dib pct30">Zn-Coat：</span>
@@ -244,14 +246,6 @@
 
 			
 
-				$(window).scroll(function(){
-					var s=$(window).scrollTop();
-					if(s>300&&s<700){
-						$(".mybottom").addClass("fixBottom");
-					}else{
-						$(".mybottom").removeClass("fixBottom");
-					}
-				})
 
 
 		})
@@ -278,6 +272,17 @@
 			shadeClose:true,
 			content:$("#settleaccounts")
 			});
+		}
+
+
+		function clickToggle(obj){
+			var myobj=$(obj).parents(".resource_titlebg").next(".res_dcont");
+			if(myobj.css("display")=="block"){
+				myobj.slideUp();
+			}else{
+				myobj.slideDown();
+			}
+			$(obj).parents(".resource_titlebg").toggleClass("on");
 		}
 	</script>
 </body>

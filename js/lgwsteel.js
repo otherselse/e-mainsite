@@ -34,11 +34,24 @@ $(function(){
 		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
 		$(this).parents(".input-selSearch").find(".search-cont").hide();
 	})
+
 	if($(".showTip").length>0){
 		$(".showTip").find('[title]').qtip({
 			position: {
 				my: 'bottom center', //my:是指三角的位置
 				at: 'top center' //是在提示在组件的相对位置
+			},
+			style: {
+				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			}
+		});
+	}
+
+	if($(".scrollRight").length>0){
+		$(".scrollRight").find('[title]').qtip({
+			position: {
+				my: 'right center', //my:是指三角的位置
+				at: 'left left' //是在提示在组件的相对位置
 			},
 			style: {
 				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
